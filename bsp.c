@@ -25,7 +25,7 @@ int main(int argc, char * args[]){
 
 	//////////////////////
 	// SDL STUFF BEGINS //
-	//////////////////////
+	///////////////////////
 
 	SDL_Window* window = NULL;
 	SDL_Surface* screenSurface = NULL;
