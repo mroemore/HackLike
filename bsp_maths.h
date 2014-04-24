@@ -11,8 +11,8 @@ typedef struct vector {
 	float Y;
 } Vector;
 
-int contains(int x, int y, int recTopX, int recTopY, int recBotX, int recBotY);
-Point midpointRect(int x1, int y1, int x2, int y2);
-Vector normalise(Vector v);
+int contains(int x, int y, int recTopX, int recTopY, int recBotX, int recBotY); //checks if point (x,y) is inside axis-aligned rectangle. returns 1 for true, 0 for false.
+Point midpointRect(int x1, int y1, int x2, int y2); //returns Point structure representing the midpoint of axis-aligned rectangle.
+Vector normalise(Vector v); //returns normalised vector.
 
 #endif

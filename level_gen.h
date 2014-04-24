@@ -3,7 +3,7 @@
 
 #include "bsp_maths.h"
 
-#define ROOM_OFS 4 
+#define ROOM_OFS 4
 
 typedef struct node { //BSP tree node
 	int topX;

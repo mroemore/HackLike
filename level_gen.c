@@ -48,6 +48,7 @@ void generateTree(int iterations, Node * root){
 }
 
 void addRooms(int ** levelArray, Room ** roomArray, Node * root){
+	printf("x ");
 	if(root->childA != NULL){
 		addRooms(levelArray, roomArray, root->childA); //More recursion! Aw yeah.
 		addRooms(levelArray, roomArray, root->childB);
