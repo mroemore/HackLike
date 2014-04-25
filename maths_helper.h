@@ -1,5 +1,5 @@
-#ifndef BSP_MATHS_H_
-#define BSP_MATHS_H_
+#ifndef MATHS_HELPER_H_
+#define MATHS_HELPER_H_
 
 typedef struct point {
 	int X;
