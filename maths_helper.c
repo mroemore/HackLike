@@ -1,6 +1,6 @@
 #include <math.h>
 
-#include "bsp_maths.h"
+#include "maths_helper.h"
 
 int contains(int x, int y, int recTopX, int recTopY, int recBotX, int recBotY){
 	if(x >= recTopX && x <= recBotX && y >= recTopY && y <= recBotY){
