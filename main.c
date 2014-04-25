@@ -5,7 +5,7 @@
 #include <math.h>
 #include <time.h>
 
-#include "bsp_maths.h"
+#include "maths_helper.h"
 #include "level_gen.h"
 
 const int MAP_W = 80;
