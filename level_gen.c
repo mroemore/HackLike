@@ -47,12 +47,9 @@ void generateTree(int iterations, Node * root){
 	}
 }
 
-void addRooms(int ** levelArray, Room ** roomArray, Node * root){
+void addRooms(int ** levelArray, Room ** roomArray, int roomArrIndex, Node * root){
 	printf("x ");
-	if(root->childA != NULL){
-		addRooms(levelArray, roomArray, root->childA); //More recursion! Aw yeah.
-		addRooms(levelArray, roomArray, root->childB);
-	} else {
+	if(root->childA == NULL) {
 		int difX = root->botX - root->topX;
 		int difY = root->botY - root->topY;
 
@@ -68,13 +65,25 @@ void addRooms(int ** levelArray, Room ** roomArray, Node * root){
 		int botXoff = (int)(rand() % (difX/3));
 		int botYoff = (int)(rand() % (difY/3));
 
+		roomArray[roomArrIndex]->topX = root->topX + topXoff;
+		roomArray[roomArrIndex]->topY = root->topY + topYoff;
+		roomArray[roomArrIndex]->botX = root->botX + botXoff;
+		roomArray[roomArrIndex]->botY = root->botY + botYoff;
+
+		roomArrIndex++;
+
 		for(int i = root->topX+1 + topXoff; i < root->botX-1 - botXoff; i++){
 			for(int j = root->topY+1 + topYoff; j < root->botY-1 - botYoff; j++){
 				levelArray[i][j] = 1;
 			}
 		}
+	} else {
+		addRooms(levelArray, roomArray, roomArrIndex, root->childA); //More recursion! Aw yeah.
+		addRooms(levelArray, roomArray, roomArrIndex, root->childB);
 	}
 }
+
+
 
 void insertPath(int ** levelArray, Point start, Point finish){
 	int lowerX  = 0;

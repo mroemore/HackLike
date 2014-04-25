@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-g -framework SDL2
+CFLAGS=-g -framework SDL2 -Wall
 DEPS = bsp_maths.h level_gen.h
 OBJ = bsp.o bsp_maths.o level_gen.o
 

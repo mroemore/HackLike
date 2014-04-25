@@ -5,8 +5,6 @@
 #include <math.h>
 #include <time.h>
 
-
-
 #include "bsp_maths.h"
 #include "level_gen.h"
 
@@ -25,7 +23,7 @@ int main(int argc, char * args[]){
 
 	//////////////////////
 	// SDL STUFF BEGINS //
-	///////////////////////
+	//////////////////////
 
 	SDL_Window* window = NULL;
 	SDL_Surface* screenSurface = NULL;
@@ -71,9 +69,10 @@ int main(int argc, char * args[]){
 
 	Room ** roomArray;
 	roomArray = (Room **) malloc(sizeof(Room) * roomCount);
-	roomArray[0] = malloc(sizeof(Room));
-	roomArray[0]->topX = 10;
-	printf("%d", roomArray[0]->topX);
+	for(int i = 0; i < roomCount; i++){
+		roomArray[i] = malloc(sizeof(Room));
+	}
+	
 
 	Node * node; //root node of BSP tree
 	node = malloc(sizeof(Node));
@@ -95,7 +94,7 @@ int main(int argc, char * args[]){
 
 	//Level generation functions
 	//generateTree(treeDepth, node);
-	//addRooms(level, roomArray, node);
+	//addRooms(level, roomArray, 0, node);
 	//addPaths(level, node);
 
 	//drawLevel(level);
