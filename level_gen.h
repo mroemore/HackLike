@@ -1,7 +1,7 @@
 #ifndef LEVEL_GEN_H_
 #define LEVEL_GEN_H_
 
-#include "bsp_maths.h"
+#include "maths_helper.h"
 
 #define ROOM_OFS 4
 
